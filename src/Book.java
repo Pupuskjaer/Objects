@@ -1,4 +1,5 @@
 import javax.security.sasl.AuthorizeCallback;
+import java.util.Objects;
 
 public class Book {
     private String name;
@@ -15,6 +16,25 @@ public class Book {
 
     public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(name, book.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return  "Имя :'" + name + '\'' +
+                ", год публикации: " + publishYear ;
     }
 
     public Book(String name, Author author, int publishYear) {
