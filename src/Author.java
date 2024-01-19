@@ -42,6 +42,6 @@ public class Author {
     public Author(String firstName, String secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.fullName = firstName + secondName;
+        this.fullName = firstName + " " + secondName;
     }
 }

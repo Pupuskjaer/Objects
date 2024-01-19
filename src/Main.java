@@ -8,7 +8,7 @@ public class Main {
         Book book1 = new Book("Silence", kickJackson, 1953);
         Book book2 = new Book("Galagooga", lowrenceGigatti, 1524);
 
-        book2.setPublishYear(1998);
+        book2.setPublishYear(1995);
 
 
 
